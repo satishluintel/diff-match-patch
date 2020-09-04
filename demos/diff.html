@@ -19,7 +19,7 @@ function launch() {
   var text1 = document.getElementById('text1').value;
   var text2 = document.getElementById('text2').value;
   dmp.Diff_Timeout = parseFloat(5);
-  dmp.Diff_EditCost = parseFloat(2);
+  dmp.Diff_EditCost = parseFloat(3);
   var d = dmp.diff_main(text1, text2);
   dmp.diff_cleanupSemantic(d);
   var ds = dmp.diff_prettyHtml(d);
@@ -39,13 +39,11 @@ function launch() {
 <TEXTAREA ID="text2" STYLE="width: 100%" ROWS=10>Please type your response here.</TEXTAREA></TD>
 </TR></TABLE>
 
-<div style="text-align: center;">
+<div style="text-align: center; line-height: 8vh;">
 <P><INPUT TYPE="button" onClick="launch()" VALUE="Check Answer"></P>
 <DIV ID="outputdiv"></DIV>
 </div>
 </FORM>
-
-<DIV ID="outputdiv" style="line-height: 8vh;"></DIV>
 
 
 </BODY>

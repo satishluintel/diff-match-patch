@@ -1,8 +1,8 @@
 var diff_match_patch = function () {
-        this.Diff_Timeout = 1;
+        this.Diff_Timeout = 5;
         this.Diff_EditCost = 4;
         this.Match_Threshold = .5;
-        this.Match_Distance = 1E3;
+        this.Match_Distance = 21E3;
         this.Patch_DeleteThreshold = .5;
         this.Patch_Margin = 4;
         this.Match_MaxBits = 32
