@@ -444,7 +444,7 @@ diff_match_patch.prototype.diff_prettyHtml = function (a) {
                 break;
             case DIFF_DELETE: b[g] = '<span style="color:red; padding:5px; border-radius:5px; font-family: Roboto;">' + l + "</span>";
                 break;
-            case DIFF_EQUAL: b[g] = "<span style='color:black;padding: 5px;background: #5cff00d1;border-radius: 3px;'>" + l + "</span>"
+            case DIFF_EQUAL: b[g] = "<span style='color:black;padding: 5px;background: #5cff00d1;border-radius: 3px; font-family: Roboto;'>" + l + "</span>"
         }
     }
     return b.join("")
