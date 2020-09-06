@@ -78,7 +78,7 @@
                 var total_words = total_greens + total_yellows;
                 var percentage_right = total_greens / total_words * 100;
                 console.log(total_words, total_greens, total_yellows);
-                var pq = document.getElementById('percentage').innerHTML = "Percentage Right: " + percentage_right + "%";
+                var pq = document.getElementById('percentage').innerHTML = "<p style='font-family:Roboto;'>Percentage Right: " + Math.round(percentage_right) + "% </p>" ;
             }
         </SCRIPT>
 
