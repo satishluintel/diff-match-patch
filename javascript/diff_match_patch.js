@@ -1,10 +1,10 @@
 var diff_match_patch = function () {
         this.Diff_Timeout = 5;
-        this.Diff_EditCost = 4;
+        this.Diff_EditCost = 10;
         this.Match_Threshold = .5;
         this.Match_Distance = 21E3;
         this.Patch_DeleteThreshold = .5;
-        this.Patch_Margin = 4;
+        this.Patch_Margin = 8;
         this.Match_MaxBits = 32
     },
     DIFF_DELETE = -1,
@@ -440,11 +440,11 @@ diff_match_patch.prototype.diff_prettyHtml = function (a) {
         var h = a[g][0],
             l = a[g][1].replace(c, "&amp;").replace(d, "&lt;").replace(e, "&gt;").replace(f, "&para;<br>");
         switch (h) {
-            case DIFF_INSERT: b[g] = '<span style="background:#fffd89b8; padding:5px; border-radius:3px; font-family: Roboto;">' + l + "</span>";
+            case DIFF_INSERT: b[g] = '<span id="missedyellow" style="background:#fffd89b8; padding:5px; border-radius:3px; font-family: Roboto;">' + l + "</span>";
                 break;
             case DIFF_DELETE: b[g] = '<span style="color:red; padding:5px; border-radius:5px; font-family: Roboto;">' + l + "</span>";
                 break;
-            case DIFF_EQUAL: b[g] = "<span style='color:black;padding: 5px;background: #5cff00d1;border-radius: 3px; font-family: Roboto;'>" + l + "</span>"
+            case DIFF_EQUAL: b[g] = '<span id="foundgreen" style="color:black;padding: 5px;background: #5cff00d1;border-radius: 3px; font-family: Roboto;">' + l + "</span>";
         }
     }
     return b.join("")
